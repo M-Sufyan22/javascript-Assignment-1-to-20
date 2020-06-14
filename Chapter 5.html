@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chap 5 js</title>
+    <style>
+        body {
+            font-size: 18px;
+            font-family: serif;
+            padding: 30px;
+            word-spacing: 8px;
+        }
+        
+        .convertors {
+            width: 100%;
+            min-height: 40vh;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            background: #f3f3f3;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .convertor,
+        .convertor2 {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 400px;
+            background-color: rgb(64, 143, 233);
+            padding: 25px 30px;
+            margin: 20px 0;
+            box-sizing: border-box;
+            align-items: center;
+        }
+        
+        .convertors h3 {
+            font-size: 20px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        input {
+            width: 300px;
+            padding: 15px 20px;
+            margin: 5px 0;
+            border-radius: 6px;
+            outline: none;
+            border: none;
+        }
+        
+        button {
+            width: 250px;
+            background-color: rgb(79, 206, 106);
+            color: #fff;
+            font-weight: bold;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 0;
+            margin: 10px 0;
+            font-size: 17px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width:100%; text-align: center;">
+        <h1>============= CHAPTER 5 ================</h1>
+        <h2>------- MATH EXPRESSIONS ------- </h2>
+    </div>
+
+    <script>
+        // ============================== CHAPTER 5 ================================================= 
+        //                             MATH EXPRESSIONS 
+
+        // Q1: Write a program that take two numbers & add them in a new variable. Show the result in your browser.
+        document.write("<h3> Q1 </h3> ");
+        var a = 3;
+        var b = 5;
+        var c = a + b;
+        document.write("Sum of " + a + " and " + b + " = " + c + "<br>");
+
+        // Q2:  Repeat task1 for subtraction, multiplication, division & modulus
+
+        // subtraction
+        document.write("<h3> Q2 </h3>");
+
+        var d = 5;
+        var e = 3;
+        var f = d - e;
+        document.write("Subtract " + d + " From " + e + " = " + f + "<br>");
+
+        // Multiplication
+
+        var g = 5;
+        var h = 5;
+        var i = g * h;
+        document.write(g + " Multiplay by " + h + " = " + i + "<br>");
+
+        // Division
+
+        var j = 10;
+        var k = 2;
+        var l = j / k;
+        document.write(j + " Divide by " + k + " = " + l + "<br>");
+
+
+        // Q3: Do the following using JS Mathematic Expressions
+        document.write("<h3> Q3 </h3>");
+
+        var declear;
+        var init = 5;
+        var incr = 1 + init;
+        var adds = init + 8;
+        var decr = adds - 1;
+        var remd = decr - decr;
+        document.write("<h3> Value after variable declaration is: " + declear + "<br>" +
+            "Initial Value: " + init + "<br>" + "Value After Increment is:  " + incr + "<br>" +
+            "Value After Addition is:  " + adds + "<br>" + "Value After decrement is:  " + decr + "<br>" +
+            "Value After decrement is:  " + remd + "<br>" + "</h3>");
+
+        // Q4: Cost of one movie ticket is 600 PKR. Write a script to storticket price in a variable &
+        //     calculate the cost of buying 5 ticketse
+
+        document.write("<h3> Q4 </h3>");
+
+        var ticket = 600;
+        var purchasetk = 5;
+        var totalcost = ticket * purchasetk;
+        document.write("Total cost to buy " + purchasetk + " tickets to a movie is " + totalcost + "PKR <br> <br>");
+
+        // Q5: Write a script to display multiplication table of any number in your browser. E.g
+
+        document.write("<h3> Q5 </h3>");
+
+        var five = 5;
+        document.write("<h3> Table Of 5 </h3>");
+        for (table = 1; table <= 10; table++) {
+            document.write(5 + " * " + table + " = " + table * five + " <br> ");
+        }
+
+        // Q6: The Temperature Converter:
+
+
+        // This as Same As per Assignment requirements..  But I also Add Additional method is it Ok?
+
+        // var celcius = 25;
+        // var f = (celcius * 9 / 5) + 32;
+        // var cl = 70;
+        // var fa = (cl - 32) * 5 / 9;
+        // document.write(celcius + "&degC is " + f + "&dgeF <br>" + cl + "&degF is " + fa + "&degC <br>")
+
+
+        //  ================== Additional Method If acceptable ==================
+    </script>
+
+    <div class="convertors">
+        Q6:
+        <div class="convertor">
+            <h3>Celcius to Fahrenheit convertor</h3>
+            <input type="number" placeholder="Enter Celcius" id="cel">
+            <button onclick="changedeg()">Change</button>
+            <input type="number" placeholder="Fahrenheit" id="fah">
+        </div>
+
+        <div class="convertor2">
+            <h3>Fahrenheit to Celcius convertor</h3>
+            <input type="number" placeholder="Enter  Fahrenheit" id="fah1">
+            <button onclick="changedeg1()">Change</button>
+            <input type="number" placeholder="Celcius" id="cel1">
+        </div>
+    </div>
+    <script>
+        function changedeg() {
+            ca = document.getElementById("cel").value;
+            st = (ca * 9 / 5) + 32;
+            document.getElementById("fah").value = st;
+        }
+
+        function changedeg1() {
+            a = document.getElementById("fah1").value;
+            b = (a - 32) * 5 / 9
+            document.getElementById("cel1").value = b;
+        }
+
+
+
+        // Q7: Write a program to implement checkout process of a 
+        //   shopping cart system for an e-commerce website. Store the following in variables
+        //           SHOPPING CARt
+        document.write("<h3> Q7 </h3>");
+
+        var p_item = 650;
+        var Q_item = 3;
+        var p_item_2 = 100;
+        var Q_item_2 = 7;
+        var shipp_charges = 100;
+        var total_cost = p_item * Q_item + p_item_2 * Q_item_2 + shipp_charges;
+
+
+        document.write("<br> Price Of item 1 is  RS: " + p_item + "PKR" + "<br>" + "Quantity Of item 1 is: " + Q_item + "<br>" +
+            "Price Of item 2 is RS: " + p_item_2 + "PKR" + "<br>" + "Quantity Of item 2 is: " + Q_item_2 + "<br>" +
+            "Shipping Charges" + shipp_charges + "<br> <br> Total Cost of your order is " + total_cost);
+
+
+        // Q8: Store total marks & marks obtained by a student in 2 variables.
+        //      Compute the percentage & show the result inyour browser
+        //                    Marksheet
+        document.write("<h3> Q8 </h3>");
+
+        var totalMarks = 980;
+        var marksobt = 804;
+        var perct = marksobt * 100 / totalMarks;
+
+        document.write("<h3> Marksheet </h3> Total Marks: " + totalMarks +
+            "<br> Obtained Marks: " + marksobt + " <br> Percentage: " + perct + "%");
+
+
+        // Q9: Assume we have 10 US dollars & 25 Saudi Riyals. Write a script to convert the total currency
+        // to Pakistani Rupees. Perform all calculations in a single expression. 
+        // (Exchange rates : 1 US Dollar = 104.80 Pakistani Rupee and 1 Saudi Riyal = 28 Pakistani Rupee
+        document.write("<h3> Q9 </h3>");
+
+        var usd = 10;
+        var riyal = 25;
+        var uspkr = 104.80;
+        var rpkr = 28;
+        var usdtopkr = usd * uspkr;
+        var riyaltopkr = riyal * rpkr;
+        var total_currency = usdtopkr + riyaltopkr;
+        document.write("Total curency into PKR: " + total_currency);
+
+
+        // Q10: Write a program to initialize a variable with some number and do arithmetic in following sequence:
+        //  a. Add 5
+        //  b. Multiply by 10
+        //  c. Divide the result by 2
+        //  Perform all calculations in a single expression
+        document.write("<h3> Q10 </h3>");
+
+        var ss = 5;
+        var perform = (ss + 5) * 10 / 50;
+        document.write("Answer is: " + perform);
+
+        //11. The Age Calculator: Forgot how old someone is? Calculate it!
+        document.write("<h3> Q11 </h3>");
+        var currentyear = 2020;
+        var birthyear = 2000;
+        var your_age = currentyear - birthyear;
+        document.write("Your Age is " + your_age);
+
+
+        // Q12: The Geometrizer: Calculate properties of a circle.  a. Store a radius into a variable.
+        document.write("<h3> Q12 </h3>");
+
+        var r = 20;
+        var pi = 3.14;
+        var area = pi * r * r;
+        var c = 2;
+        var circumference = c * pi * r;
+        document.write("Radius of a Circle: " + r + "<br> The circumference is: " + circumference +
+            "<br> The are of circle is: " + area + "<br>");
+
+
+
+        //Q 13: The Lifetime Supply Calculator:
+        document.write("<h3> Q13 </h3>");
+
+        var snack = "Almonds";
+        var currentage = 19;
+        var esti_age = 55;
+        var snack_perday = 10;
+        var snack_calculted = (esti_age - currentage) * snack_perday;
+        document.write("Favourate snack: " + snack + "<br> Current Age: " + currentage +
+            "<br> Estimmated Maximum Age: " + esti_age + "<br> Amount of snacks perday: " + snack_perday +
+            "<br> You will need " + snack_calculted + "  " + snack + " to last you until the ripe old age of" + esti_age);
+    </script>
+
+    <h3>Finish...</h3>
+</body>
+
+</html>

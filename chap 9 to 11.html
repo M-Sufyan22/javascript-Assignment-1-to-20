@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chap 9 to 11 js</title>
+    <style>
+        .games {
+            width: 100%;
+            min-height: 50vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 500px;
+            background-color: #f3f3f3;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 25px;
+            border: #4891f0 1px solid;
+            margin: 25px 0;
+        }
+        
+        input[type=number] {
+            padding: 15px 20px;
+            margin: 5px 0;
+            outline: none;
+        }
+        
+        input[type=number]:hover,
+        input[type=number]:focus {
+            border: #4891f0 2px solid;
+        }
+        
+        input[type=text] {
+            text-align: center;
+            padding: 2px 0;
+            border: none;
+            outline: none;
+            margin-bottom: 5px;
+            background-color: transparent;
+        }
+        
+        input[type=button],
+        [type=reset] {
+            margin: 5px;
+            padding: 10px;
+            background-color: #4891f0;
+            color: #fff;
+            border: none;
+            outline: none;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        
+        .cal_sec {
+            width: 100%;
+            min-height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .cal {
+            background-color: #f3f3f3;
+            width: 600px;
+            padding: 25px 30px 50px 30px;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border: #4891f0 1px solid;
+        }
+        
+        .cal h1 {
+            margin-bottom: 30px;
+        }
+        
+        .cal input[type=number] {
+            width: 500px;
+        }
+        
+        #answer {
+            width: 500px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid #4891f0;
+            background-color: transparent;
+            margin-bottom: 20px;
+            /* padding: 20px; */
+        }
+        
+        .btnsec {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .cal input[type=button] {
+            width: 250px;
+        }
+        
+        .cal input[type=button]:last-child {
+            width: 510px;
+        }
+        
+        .cal input[type=reset] {
+            width: 510px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // USER INPUT & CONDITIONAL STATEMENT
+        // Chap 6 to 9 Question/Answers
+
+        //Q1. Write a program to take “city” name as input from user. If user enters “Karachi”, 
+        //     welcome the user like this: “Welcome to city of lights”
+        document.write("<h3> Q1 </h3> ");
+
+
+        var user_city = prompt("Enter your City");
+        if (user_city == "karachi") {
+            document.write("Welcome to the City of Lights");
+        } else {
+            document.write("Welcome! <br>");
+        }
+
+        //Write a program to take “gender” as input from user. If the user is male,
+        //give the message: Good Morning Sir. If the user is female, give the message: Good Morning Ma’am.
+
+        document.write("<h3> Q2 </h3> ");
+
+
+        var gender = prompt("Enter Your Gender");
+
+        if (gender == "female") {
+            document.write("<br> Good Morning! Mamm.");
+        } else {
+            document.write("<br> Good Morning! Sir.");
+
+        }
+
+        //Q3. Write a program to take input color of road traffic signal from the user &
+        // show the message according to this table:
+
+        document.write("<h3> Q3 </h3> ");
+
+        var color = prompt("Enter Color:");
+        if (color == "red") {
+            document.write("Must Stop!");
+        } else if (color == "yellow") {
+            document.write("Ready to Move!");
+        } else {
+            document.write("Move Now!");
+        }
+
+        //Q4. Write a program to take input remaining fuel in car (in litres) from user.
+        // If the current fuel is less than 0.25litres, show the message “Please refill the fuel in your car”
+
+        document.write("<h3> Q4 </h3> ");
+
+        var fuel = parseInt(prompt("Enter the remaining fuel of your car"));
+        if (fuel <= 0.25) {
+            document.write("“Please refill the fuel in your car”");
+        } else if (fuel <= 1) {
+            document.write("Please reFill your car as soon as posible");
+        } else {
+            document.write("your car is Full! <br>");
+        }
+
+
+
+        //Q5. Write a program to take input the marks obtained in three subjects & total marks.
+        //Compute & show the resulting percentage on your page.Take percentage & compute
+        //grade as per following tab
+
+        var mark_obt1 = parseInt(prompt("Enter Obtained Mark of Subjaect 1"));
+        var mark_obt2 = parseInt(prompt("Enter Obtained Mark of Subjaect 2"));
+        var mark_obt3 = parseInt(prompt("Enter Obtained Mark of Subjaect 2"));
+
+        var A_one = "A-one";
+        var A = "A";
+        var b = "B";
+        var Fail = "Fail";
+
+        var total_marks = 300;
+        var total_obtained = mark_obt1 + mark_obt2 + mark_obt3;
+        var percent = total_obtained * 100 / total_marks;
+
+        document.write("<br> <table border 1px> <tr> <th>Percentage%</th> <th>Grade</th> <th>Remarks</th> </tr>" +
+            "<tr><td> Greater than or equal to 80 </td> <td>  A-one </td> <td> Excellent </td>" +
+            "<tr><td> Greater than or equal to 70 </td> <td> A </td> <td> Good </td>" +
+            "<tr><td> Greater than or equal to 60 </td> <td> B </td> <td> You need to improve! </td>" +
+            "<tr><td> Less than 60 </td> <td> Fail </td> <td> Sorry </td>" + " </tr>  </table> <br>")
+
+
+        document.write("Total Marks: " + total_marks + "<br> Marks Obtained: " + total_obtained +
+            "<br> Percentage: " + percent + "%" + "<br>");
+
+
+        if (percent >= 80) {
+            document.write("Grade: " + A_one);
+        } else if (percent >= 70) {
+            document.write("Grade: " + A);
+        } else if (percent >= 60) {
+            document.write("Grade: " + b);
+        } else if (percent <= 60) {
+            document.write("Grade: " + Fail);
+        }
+
+        //Q6. Run this script, & check whether alert message would be displayed or not.Record the outputs.
+
+        var a = 4;
+        if (++a === 5) {
+            alert("given condition for variable a is true");
+        }
+
+        var b = 82;
+        if (b++ === 83) {
+            alert("given condition for variable b is true");
+        }
+
+        var c = 12;
+        if (c++ === 13) {
+            alert("condition 1 is true");
+        }
+
+        if (c === 13) {
+            alert("condition 2 is true");
+        }
+        if (++c < 14) {
+            alert("condition 3 is true");
+        }
+        if (c === 14) {
+            alert("condition 4 is true");
+        }
+
+
+        //Q10. Write a program that takes temperature as input and
+        // shows a message based on following criteria
+    </script>
+    <br>
+    <div class="games">
+        <form>
+            <h3>Guess The Luck Number Game.</h3>
+            <input type="number" name="" id="number" placeholder="Guess the Lucky number" required>
+            <input type="text" id="game_result" readonly="readonly">
+            <input type="button" onclick="game()" value="Check Number">
+            <input type="reset" value="Reset">
+        </form>
+
+        <form>
+            <h3>Temprature</h3>
+            <input type="number" name="" id="user_t" placeholder="Enter Temperature" required>
+            <input type="text" id="tem_result" readonly="readonly">
+            <input type="button" onclick="temp()" value="Check Number">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+
+    <div class="cal_sec">
+
+        <form class="cal">
+            <h1>JavaScript Calculator</h1>
+            <input type="number" name="" id="first_num" placeholder="Enter First number">
+            <input type="number" name="" id="second_num" placeholder="Enter Second number">
+            <input type="number" name="" id="answer" placeholder="Your Answer" readonly>
+            <div class="btnsec">
+                <input type="reset" value="Clear">
+                <input type="button" onclick="showresult('3')" value="*">
+                <input type="button" onclick="showresult('2')" value="-">
+                <input type="button" onclick="showresult('4')" value="/">
+                <input type="button" onclick="showresult('5')" value="%">
+                <input type="button" onclick="showresult('1')" value="+">
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

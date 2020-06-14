@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chap 14 to 16 Js assignment</title>
+    <style>
+        .box {
+            width: 40%;
+            min-height: 20vh;
+            background-color: darkgray;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 25px 15px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #fff;
+        }
+        
+        .box input {
+            width: 80%;
+            margin: 10px 0;
+            padding: 15px;
+        }
+        
+        .box input[type=button],
+        input[type=reset] {
+            background-color: #4891f0;
+            border: none;
+            outline: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 15px 20px;
+            width: 87%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // ================================= ARRAYS ==========================================
+
+        // Q1. Declare an empty array using JS literal notation to store student names in future.
+
+        var arr = [];
+
+        //Q2. Declare an empty array using JS object notation to store student names in future.
+
+        var ar = new Array();
+
+        //Q3. Declare and initialize a strings array.
+
+        var str = [" 'Muhammad ", "Sufyan..'"];
+        document.write("This is a string Array " + str);
+
+        //Q4. Declare and initialize a numbers array.
+
+        var num = [10, 20, 30];
+        document.write("<br> <br> This is a Numeric Array " + num);
+
+        //Q5. Declare and initialize a boolean array.
+
+        var bool = [true, false];
+        document.write("<br> <br> This is a boolean Array " + bool);
+
+        //Q6. Declare and initialize a mixed array.
+
+        var mixarr = [10, " Hello Sir! ", true, "20", false];
+        document.write("<br> <br> This is a Mix  Array " + mixarr);
+
+        //Q7. Declare and Initialize an array and store available  education qualifications
+        //     in Pakistan(e.g.SSC, HSC, BCS, BS, BCOM, MS, M.Phil., PhD).
+
+        var educate = ["SSC ", "BCS", "BS", "BCOM", "MS", " M.Phil", "PhD"];
+        document.write("<h2>Qualification:</h2> <ol>");
+        for (a = 0; a <= 6; a++) {
+            document.write("<li>" + educate[a] + "</li>");
+        }
+        document.write("</ol><br>");
+
+
+        //Write a program to store 3 student names in an array.Take another array to store
+        // score of these three students. Assume that total marks are 500 for each student,
+
+        // var std_names = ["Ali", "Hamza", "Saeed"];
+        // var std_score = [320, 230, 480];
+
+        // document.write("Score of " + std_names[0] + " is " + std_score[0] + " Percentage 64% <br>" +
+        //     "Score of " + std_names[1] + " is " + std_score[1] + " Percentage 46% <br>" +
+        //     "Score of " + std_names[2] + " is " + std_score[2] + " Percentage 96% <br>");
+
+        //Q9. Initialize an array with color names. Display the array elements in your browser
+
+        //a. Ask the user what color he / she wants to add to the
+        //    beginning & add that color to the beginning of the array.
+        //      Display the updated array in your browser.
+
+        //b. Ask the user what color he/she wants to add to the end & add that color to the end of
+        // the array. Display the updated array in your browser.
+
+
+        var color = [" Red ", " Greeen ", " Yellow ", " Black "];
+        document.write("<br><br> <h3>" + color + "</h3>");
+
+
+
+        function addbeg() {
+
+            var co = document.getElementById("color").value;
+            color.unshift(co);
+            if (co === "") {
+                document.getElementById("added").value = "You didn't Entered (empty) Value!";
+                document.getElementById("added").style.color = "red";
+            } else {
+                document.getElementById("added").value = color;
+                document.getElementById("added").style.color = "green";
+            }
+
+        }
+
+        function addend() {
+
+            var co = document.getElementById("color").value;
+            color.push(co);
+            if (co === "") {
+                document.getElementById("added").value = "You didn't Entered (empty) Value!";
+                document.getElementById("added").style.color = "red";
+            } else {
+                document.getElementById("added").value = color;
+                document.getElementById("added").style.color = "green";
+            }
+
+        }
+
+
+        //c.Add two more color to the beginning of the array.
+        //   Display the updated array in your browser.
+
+        color.unshift(" Orange ", " Purple ");
+        document.write("<br> After: The added two color in the begining: <h4>" + color + "</h4>");
+
+        //d.Delete the first color in the array.Display the updated array in your browser.
+
+        color.shift()
+        document.write("<br>After: The removing first color from the begining: <h4>" + color + "</h4>");
+
+        //e. Delete the last color in the array. Display the updated array in your browser.
+
+        color.pop()
+        document.write("<br>After: Deleted the last color from array: <h4>" + color + "</h4>");
+        // g.Ask the user at which index he / she wants to delete color(s) & how many colors he / she wants to delete
+    </script>
+
+    <form class="box">
+        <h1>Add value in the begining or Ending of Array! </h1>
+
+        <input type="text" id="color" placeholder="Enter color name:">
+        <input type="text" id="rm" placeholder="Enter the index for remove from Array">
+        <input type="text" name="" id="added" placeholder="Array value is here!">
+        <input type="button" onclick="addbeg()" value="Add-Value-in-Begining-of-Array">
+        <input type="button" onclick="addend()" value="Add-Value-in-Ending-of-Array">
+        <input type="button" onclick="addbeg()" value="Remove-Value-">
+        <input type="reset">
+    </form>
+    <p id="ccc"></p>
+</body>
+
+</html>

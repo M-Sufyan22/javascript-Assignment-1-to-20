@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chap 6 to 9 js</title>
+    <style>
+        body {
+            font-family: serif;
+            word-spacing: 3px;
+            font-size: 17px;
+            padding: 0 40px7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        // ============================== CHAPTER 6 ================================================= 
+        //                             MATH EXPRESSIONS
+
+        // Q:1 Write a program to take a number in a variable, do the required arithmetic to display
+        //     the following result in your browser:
+
+        document.write("<h3> Q1 </h3> ");
+
+        var a = 10;
+
+        document.write("<h3>Result:</h3> The value of a is: " + a + "<br> ...................................... <br>");
+
+        a = ++a;
+
+        document.write("<br> The value of ++a is: " + a + "<br> Now The value of a is: " + a + "<br><br><br>");
+        document.write("The value of a++ is:" + a++ + "<br> Now the value of a is:" + a);
+
+
+        --a;
+        document.write("<br><br><br> The value of --aa is: " + a + "<br> Now the value of a is: " + a);
+        document.write("<br><br><br>  The value of a-- is: " + a-- + "<br> Now the value of a is: " + a + "<br> <br>");
+
+
+
+
+        //Q2: What will be the output in variables a, b & result after execution of the following script:
+        //     var a = 2, b = 1;
+        //     var result = --a - --b + ++b + b--;
+
+
+
+        document.write("<h3> Q2 </h3> ");
+
+
+        var m = 10;
+        var n = 5;
+
+        document.write("m = " + m + "<br> n = " + n);
+        var result = --m - --n + ++n + n--;
+        document.write("<br> <br> --m = 9 <br> --n = 4 <br> --m - --n = 5 <br>++n = 5  <br> n-- = 5  <br>--m - --n + ++n n++ : 5+5+5 = 15; <br>")
+        document.write("<br> Result = " + result + "<br><br>");
+
+
+
+        // Q3: Write a program that takes input a name from user & greet the user.
+        document.write("<h3> Q3 </h3> ");
+
+
+        var user = prompt("Enter you name:");
+        document.write("Hello! " + user + " How are you?");
+
+
+        //Q4: Write a program to take input a number from user & display it’s multiplication table
+        //    on your browser. If user does not enter a new number, multiplication table of 5
+        //    should be displayed by default
+
+        document.write("<h3> Q4 </h3> <h3>User Table</h3>");
+
+        var usertable = prompt("Enter table number:");
+        var five = 5;
+        if (usertable == "") {
+            document.write("<h4> You did not Enter any value. So By default javascript prints Table of 5 </h4>");
+            for (s = 1; s <= 10; s++) {
+                document.write(five + " * " + s + " = " + five * s + " <br> ");
+            }
+
+        } else {
+            document.write("<h4> Your Given Value of " + usertable + " is Converted to table: </h4>");
+            for (s = 1; s <= 10; s++) {
+                document.write(usertable + " * " + s + " = " + usertable * s + " <br> ");
+            }
+
+        }
+
+        //Q5: Student mark and percentage
+        document.write("<h3> Q5 </h3> <h3>User Table</h3>");
+
+        var sub_1 = prompt("Enter Your First Subject Name:");
+        var sub_2 = prompt("Enter Your Second Subject Name:");
+        var sub_3 = prompt("Enter Your Third Subject Name:");
+        var sub_1 = "urdu";
+        var sub_2 = "maths";
+        var sub_3 = "java";
+
+        var total_marks = 100;
+
+        var obtained_mark1 = parseInt(prompt("Enter First Subject Obtained Marks"));
+        var obtained_mark2 = parseInt(prompt("Enter Second Subject Obtained Marks"));
+        var obtained_mark3 = parseInt(prompt("Enter Third Subject Obtained Marks"));
+
+
+        var percentage1 = obtained_mark1 * 100 / total_marks;
+        var percentage2 = obtained_mark2 * 100 / total_marks;
+        var percentage3 = obtained_mark3 * 100 / total_marks;
+
+        document.write("<table border 1px style='text-align:center;' " +
+            " <tr> <th> Subjects </th> <th> Total Marks </th> <th> Obtained Marks </th> <th> Percentage </th></tr>" +
+            " <tr> <td>" + sub_1 + "</td> <td>" + total_marks + " </td> <td>" + obtained_mark1 + "</td> <td>" + percentage1 + "%" + "</td> </tr>" +
+            " <tr> <td>" + sub_2 + "</td> <td>" + total_marks + " </td> <td>" + obtained_mark2 + "</td> <td>" + percentage2 + "%" + "</td> </tr>" +
+            " <tr> <td>" + sub_3 + "</td> <td>" + total_marks + " </td> <td>" + obtained_mark3 + "</td> <td>" + percentage3 + "%" + "</td> </tr> </table> <br>");
+        document.write("<h3>Finish Chap 5 Assignment</h3>");
+    </script>
+</body>
+
+</html>

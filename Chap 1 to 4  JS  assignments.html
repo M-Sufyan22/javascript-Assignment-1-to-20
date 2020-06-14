@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chap1 to Chap4,JS Assignments</title>
+    <style>
+        body {
+            padding: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #fefefe;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        button {
+            padding: 10px;
+            border: none;
+            outline: none;
+            background-color: #3ca4d4;
+            color: #fff;
+            font-size: 17px;
+            cursor: pointer;
+            transition: linear .6s;
+        }
+        
+        button:hover {
+            transform: translate(0, 8px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width:100%; text-align: center;">
+        <h1>============= CHAPTER 1 To 4 Assignments ================</h1>
+    </div>
+
+    <p id="p"></p>
+
+    <br>
+    <br>
+    <br>
+    <h1 id="head"></h1>
+    <br>
+    <li id="lia"></li>
+    <li id="lib"></li>
+    <li id="lic"></li>
+    <li id="lid"></li>
+    <br>
+    <p id="text"></p>
+
+    <button onclick="clickcounter()">Check Your Visites</button>
+    <br>
+    <br><br>
+</body>
+<script>
+    // =========================== Chapter 1 =======================================
+    //                             Alerts  
+
+    //      Q1. Write a script to greet your website visitor using JS alert box.
+    //      Q2. Write a script to display following message on your web page:
+
+    alert("ERROR! Please Enter a valid Password");
+
+    //      Q3. Write a script to display following message on your web page: (Hint : Use line break)
+    //      Q4. Write a script to display following messages in sequence:
+
+    alert("Welcome to JS Land...\n Happy Coding!");
+
+    //      Q5. Generate the following message through browser’s developer console:
+    // ANS: I have DONE WITH THIS IN MY BROWSER CONSOLE
+
+    //      Q6. Make use of alerts in your new / existing HTML & CSSproject.
+    // Ans: Completed how can i show you sir?
+
+
+    // =============================== Chapter 2 ==================================================
+    //                            VARIABLES FOR STRINGS
+
+    //     Q1. Declare a variable called username.
+    //     Q2. Declare a variable called myName & assign to it a string
+    //     that represents your Full Name.
+    //     Q3. Write script to
+    //          a) Declare a JS variable, titled message.
+    //          b) Assign “Hello World” to variable message
+    //          c) Display the message in alert box.
+    //     Q4. Write a script to save student’s bio data in JS variables and
+    //     show the data in alert boxes.
+
+
+    var username = "sufyan22";
+    var myname = "Muhammad Sufyan";
+    var message = "Hello World";
+    alert(myname);
+
+    var education = "Intermediate";
+    var email = "mmuhammadsufyan5@gmail.com";
+    var age = "19";
+
+    var std_bio = "Student Name: " + myname + "\n" + "Student email: " + email + "\n" + "Student age: " + "Student Education: " + education;
+    alert(std_bio);
+
+
+
+    //     Q5. Write a script to display the following alert using one Js variable:
+    var pizza = " pizza \n Pizz \n piz  \n Pi  \n P";
+    alert(pizza);
+
+    //     Q6. Declare a variable called email and assign to it a string that 
+    //      represents your Email Address(e.g. example@example.com).
+    //      Show the blow mentioned message in an alert box.(Hint: use
+    //      string concatenation)
+
+    var email = "example@example.com)";
+    alert("My Email Address is:  " + email);
+
+    //     Q7. Declare a variable called book & give it the value“ A
+    //     smarter way to learn JavaScript”.Display the following
+    //     message in an alert box:
+
+    var book = " A smarter way to learn JavaScript ";
+    alert("I am trying to leran from the Book: " + book);
+
+
+    //     Q8. Write a script to display this in browser through JS
+    var para = document.getElementById("p");
+    para.innerHTML = "yeah! I Can Write HTML content through Javascript \n";
+
+
+    //    9. Store following string in a variable and show in alert and browser through JS
+    var design = " “▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬” ";
+    alert(design);
+
+
+    //  ================================= Chapter 3 ==============================================
+    //                            VARIABLES FOR NUMBERS 
+
+    //  Q1. Declare a variable called age & assign to it your age. Show your age in an alert box.
+
+    var age = 15;
+    alert("Iam " + age + " years old");
+
+    //  Q2. Declare & initialize a variable to keep track of how many times a visitor has visited a web page.
+    //      Show his/her number of visits on your web page. 
+    //      For example: “You have visited this site N times”.
+
+    var click = 0;
+
+    function clickcounter() {
+        click += 1;
+        alert("You have visited this page " + click + " Time's \n" + "You Want Check Again?");
+    }
+
+
+
+
+    //  Q3. Declare a variable called birthYear & assign to it your birth year. Show the following message in your browser:
+
+    var birthYear = 2000;
+    document.getElementById("text").innerHTML = "My birth Year is" + birthYear + " Data type of my declared variable is number \n";
+
+    //Write a script to store in variables the following information:
+    //  a.Visitor’ s name
+    //  b.Product title
+    //  c.Quantity i.e.how many products a visitor wants to order
+
+    var vendorname = "John Doe ";
+    var pquantity = 5;
+    var producttitle = " T-Shirts ";
+    var storename = " XYZ Clothing Store ";
+
+    document.write(innerHTML = vendorname + " Orderd " + pquantity + producttitle + storename);
+
+
+
+    // ================================ Chapter 4 ================================================ 
+    //                   VARIABLE NAMES: LEGAL & ILLEGAL 
+
+    //   Q1.Declare 3 variables in one statement.
+
+    var first = "one";
+    second = "Two";
+    Third = "Three";
+
+
+    //   Q2. Declare 5 legal & 5 illegal variable names.
+
+    // Ans: 5 illegal variables are.
+    // 1.   var P2a%88$;
+    // 2.   var 22Nameofband;
+    // 3.   var $_;  or  var _$;
+    // 4.   var 123;
+    // 5.   var carbus= Buscar;
+
+    //  5 illegal variables are.
+
+    // var name ="sufyan";
+    // var age = 19;
+    // var first = "one"; second = "Two"; Third = "Three";
+    // var username;
+    // var i = 0;
+
+
+
+    //  Q3.Display this in your browser
+    //       a) A heading stating “Rules for naming JS variables”
+    //        b) Variable names can only contain ______, ______,
+    //        ______ and ______.
+    //            For example $my_1stVariable
+    //        c) Variables must begin with a ______, ______ or
+    //        _____. For example $name, _name or name
+    //        d) Variable names are case _________
+    //        e) Variable names should not be JS _________
+
+
+    document.getElementById("head").innerHTML = " “Rules for naming JS variables” ";
+    document.getElementById("lia").innerHTML = "Variable names can only contain numbers, $ and _ .  For example $my_1stVariable";
+    document.getElementById("lib").innerHTML = "Variables must begin with a letter, $ or_. For example $name,_name or name";
+    document.getElementById("lic").innerHTML = "Variable names are case sensitive";
+    document.getElementById("lid").innerHTML = "Variable names should not be JS Keyword";
+</script>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chap 12 to 13 js</title>
+</head>
+
+<body>
+
+    <script>
+        // =================== Chapter 12 to 13 ===========================
+
+        //Q1. Write a program that takes a character (number or string) in a variable &
+        //  checks whether the given input is a number, uppercase letter or lower
+        //  case letter.(Hint: ASCII codes: -A = 65, Z = 90, a = 97, z = 122).
+        document.write("<h3> Q1 </h3> ");
+
+        var ss = prompt("Enter Any character or number to check");
+        if (ss >= 'A' && ss <= 'Z') {
+            document.write(ss + " is an UpperCase character <br>");
+        } else if (ss >= 'a' && ss <= 'z') {
+            document.write(ss + " is an LowerCase character <br>");
+        } else {
+            document.write(ss + " is not an aplhabetic character <br>");
+        }
+
+        //Q2 Write a JavaScript program that accept two integers and display the larger.
+        //   Also show if the two integers are equal.
+        document.write("<h3> Q2 </h3> ");
+
+
+        var f_n = parseInt(prompt("Enter first integer value!"));
+        var sec_n = parseInt(prompt("Enter second integer value!"));
+
+        if (f_n === sec_n) {
+            document.write("Both Integer Are Equal!");
+        } else if (f_n < sec_n) {
+            document.write("<br>" + sec_n + " second Integer is Larger than First");
+        } else {
+            document.write("<br>" + f_n + " First Integer is Larger than second");
+        }
+
+
+        //Q3 Write a program that takes input a number from user & state whether
+        //    the number is positive, negative or zero
+        document.write("<h3> Q3 </h3> ");
+
+        var user = parseInt(prompt("Enter a positive or negative value or 0"));
+
+        if (user > 0) {
+            document.write(user + " your given Value is Positive.");
+        } else if (user < 0) {
+            document.write(user + " your given Value is Negative.");
+        } else if (user == 0) {
+            document.write(user + " Your given Value is 0.");
+        } else {
+            document.write(user + "br>  This is not Positive or Negative or 0 Value!");
+        }
+
+
+        //Q4 Write a program that takes a character (i.e. string of length 1)
+        //   and returns true if it is a vowel, false otherwise
+        document.write("<h3> Q4 </h3> ");
+
+        var vov = prompt("Enter A character");
+        var a = 'a';
+        var e = 'e';
+        var i = 'i';
+        var o = 'o';
+        var u = 'u';
+        if (vov == a | vov == e | vov == i | vov == o | vov == u) {
+            document.write("true");
+
+        } else {
+            document.write("false");
+        }
+
+
+        //Q5. Write a program that a. Store correct password in a JS variable.
+        document.write("<h3> Q5 </h3> ");
+
+        var user_pass = prompt("Enter your password to login!");
+        var password = "123";
+        if (user_pass == password) {
+            document.write("Correct! The password you entered matches the original password”.");
+        } else {
+            document.write("Wrong Password!");
+        }
+
+        //6. This if/else statement does not work. Try to fix it:
+        document.write("<h3> Q6 </h3> ");
+
+        var greeting;
+        var hour = 13;
+        if (hour < 18) {
+            document.write("Good day");
+        } else {
+            document.write(" Good evening");
+        }
+
+        //Q7. Write a program that takes time as input from user in 24
+        //   hours clock format like: 1900 = 7pm. Implement the
+        //   following case using if, else & else if statements
+        document.write("<h3> Q7 </h3> ");
+
+        var user_time = parseInt(prompt("Enter your Time! in 24hrs format"));
+        if (user_time >= 0000 && user_time < 1200) {
+            document.write("Good Morning!");
+        } else if (user_time >= 1200 && user_time < 1700) {
+            document.write("Good AfterNoon!");
+        } else if (user_time >= 1700 && user_time < 2100) {
+            document.write("Good Evening!");
+        } else if (user_time >= 2100 && user_time <= 2359) {
+            document.write("Good Night!");
+        }
+    </script>
+</body>
+
+</html>
